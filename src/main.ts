@@ -5,7 +5,9 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: true, //모든출처 허용
+    origin: [
+      'https://portfolio-front-nu9h-git-master-jeon-yunas-projects.vercel.app',
+    ],
 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
     Credentials: true,

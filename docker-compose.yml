@@ -30,8 +30,10 @@ services:
         condition: service_healthy
     env_file:
       - .env
+    volumes:
+      - /app
     working_dir: /app
-    command: npm run start:prod
+    command: npm run start:dev
 
 volumes:
   mysql-data:
