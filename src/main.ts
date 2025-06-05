@@ -7,11 +7,11 @@ async function bootstrap() {
   app.enableCors({
     origin: [
       'http://localhost:3000',
-      'https://portfolio-front-nu9h-git-master-jeon-yunas-projects.vercel.app',
+      'https://portfolio-front-nu9h.vercel.app',
     ],
 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-    Credentials: true,
+    credentials: true,
   });
   app.useGlobalPipes(
     new ValidationPipe({
